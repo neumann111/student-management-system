@@ -1,16 +1,3 @@
-
-
-Skip to content
-Using Gmail with screen readers
-1 of 9,591
-Code
-Inbox
-Summarize this email
-
-Venkat <vssmartguy@gmail.com>
-7:10 PM (0 minutes ago)
-to me
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {

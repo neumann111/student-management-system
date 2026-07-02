@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
 import AddStudent from "./pages/AddStudent";
 import EditStudent from "./pages/EditStudent";
+import StudentDetails from "./pages/StudentDetails"; // NEW: Student details page
 
 /*
   ======================================================
@@ -15,14 +16,15 @@ import EditStudent from "./pages/EditStudent";
   ------------------------------------------------------
   Purpose:
   - Defines all frontend routes for the application
-  - Controls navigation between pages
-  - Uses React Router (BrowserRouter + Routes + Route)
+  - Handles navigation between pages (SPA routing)
+  - Uses React Router DOM for client-side routing
 
-  Structure:
-  - "/" → Dashboard (home page)
-  - "/students" → Student listing page
-  - "/students/add" → Add new student form
-  - "/students/edit/:id" → Edit student form (dynamic route)
+  Route Summary:
+  "/"                     → Dashboard (home page)
+  "/students"            → Students list page
+  "/students/add"       → Add new student
+  "/students/edit/:id"   → Edit student (dynamic route)
+  "/students/:id"        → View student details (dynamic route)
   ======================================================
 */
 function App() {
@@ -33,8 +35,8 @@ function App() {
       BROWSER ROUTER WRAPPER
       ------------------------------------------------------
       Purpose:
-      - Enables client-side routing (no page reloads)
-      - Uses HTML5 history API internally
+      - Enables client-side routing using HTML5 history API
+      - Prevents full page reloads when navigating
       ======================================================
     */
     <BrowserRouter>
@@ -46,58 +48,25 @@ function App() {
         Purpose:
         - Holds all route definitions
         - Matches URL → renders correct component
+        - Only one route renders at a time
         ======================================================
       */}
       <Routes>
 
-        {/*
-          ======================================================
-          DASHBOARD ROUTE
-          Path: "/"
-          Purpose:
-          - Landing page of the application
-          - Shows analytics and overview
-          ======================================================
-        */}
+        {/* DASHBOARD */}
         <Route path="/" element={<Dashboard />} />
 
-        {/*
-          ======================================================
-          STUDENTS LIST ROUTE
-          Path: "/students"
-          Purpose:
-          - Displays all students in table format
-          - Supports search, filter, sort, pagination
-          ======================================================
-        */}
+        {/* STUDENTS LIST */}
         <Route path="/students" element={<Students />} />
 
-        {/*
-          ======================================================
-          ADD STUDENT ROUTE
-          Path: "/students/add"
-          Purpose:
-          - Opens form to create a new student
-          - Uses StudentForm in "add mode"
-          ======================================================
-        */}
+        {/* ADD STUDENT */}
         <Route path="/students/add" element={<AddStudent />} />
 
-        {/*
-          ======================================================
-          EDIT STUDENT ROUTE (DYNAMIC ROUTE)
-          Path: "/students/edit/:id"
-
-          Example:
-          /students/edit/123
-
-          Purpose:
-          - Loads existing student data by ID
-          - Opens form in "edit mode"
-          - Allows updating student details
-          ======================================================
-        */}
+        {/* EDIT STUDENT (DYNAMIC ROUTE) */}
         <Route path="/students/edit/:id" element={<EditStudent />} />
+
+        {/* VIEW STUDENT DETAILS (DYNAMIC ROUTE) */}
+        <Route path="/students/:id" element={<StudentDetails />} />
 
       </Routes>
 
@@ -105,5 +74,7 @@ function App() {
   );
 }
 
-// Export main App component
+// ======================================================
+// EXPORT ROOT APP COMPONENT
+// ======================================================
 export default App;
