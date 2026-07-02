@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CS",
+    "name": "Computer Science"
+  },
+  {
+    "id": "IT",
+    "name": "Information Technology"
+  },
+  {
+    "id": "ME",
+    "name": "Mechanical Engineering"
+  },
+  {
+    "id": "EE",
+    "name": "Electrical Engineering"
+  },
+  {
+    "id": "CE",
+    "name": "Civil Engineering"
+  },
+  {
+    "id": "AI",
+    "name": "Artificial Intelligence"
+  },
+  {
+    "id": "DS",
+    "name": "Data Science"
+  },
+  {
+    "id": "ECE",
+    "name": "Electronics & Communication"
+  },
+  {
+    "id": "BT",
+    "name": "Biotechnology"
+  }
+]
