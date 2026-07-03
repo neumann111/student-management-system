@@ -5,10 +5,10 @@
     "email": "john.doe@example.com",
     "phone": "9910365718",
     "gender": "Male",
-    "dob": "",
+    "dob": "1992-01-01",
     "department": "Computer Science",
     "year": "3rd",
-    "address": "",
+    "address": "12, Bakersfield, United States",
     "status": "Active"
   },
   {

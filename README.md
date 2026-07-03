@@ -49,6 +49,9 @@ A modern full-stack **Student Management System** built with **React**, **Node.j
 
 ![Students List](./screenshots/students.png)
 
+### View Student
+![View Student](./screenshots/view-student.png)
+
 ### Add Student
 
 <p align="center">
