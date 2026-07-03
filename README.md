@@ -86,7 +86,7 @@ npm install
 ### 3. Start the Backend Server
 
 ```bash
-node server.js
+npm run server
 ```
 
 The backend will be available at:
