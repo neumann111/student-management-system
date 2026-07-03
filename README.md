@@ -120,13 +120,69 @@ http://localhost:5173
 
 ```text
 student-management-system/
-│
-├── frontend/          # React application
-├── data/              # JSON storage
-├── server.js          # Express server
-├── screenshots/       # README images
+├── README.md
+├── backend
+│   ├── controllers
+│   │   ├── departmentController.js
+│   │   └── studentController.js
+│   ├── data
+│   │   ├── departments.json
+│   │   └── students.json
+│   ├── routes
+│   │   ├── departmentRoutes.js
+│   │   └── studentRoutes.js
+│   └── server.js
+├── frontend
+│   ├── README.md
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   ├── favicon.svg
+│   │   └── icons.svg
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   ├── hero.png
+│   │   │   ├── react.svg
+│   │   │   └── vite.svg
+│   │   ├── components
+│   │   │   ├── dashboard
+│   │   │   │   ├── RecentStudents.jsx
+│   │   │   │   └── StatCard.jsx
+│   │   │   ├── layout
+│   │   │   │   ├── DashboardLayout.jsx
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   └── Sidebar.jsx
+│   │   │   └── students
+│   │   │       ├── DeleteModal.jsx
+│   │   │       ├── FilterBar.jsx
+│   │   │       ├── Pagination.jsx
+│   │   │       ├── SearchBar.jsx
+│   │   │       ├── StudentForm.jsx
+│   │   │       └── StudentTable.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   ├── pages
+│   │   │   ├── AddStudent.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── EditStudent.jsx
+│   │   │   ├── StudentDetails.jsx
+│   │   │   └── Students.jsx
+│   │   └── services
+│   │       └── studentService.js
+│   └── vite.config.js
+├── package-lock.json
 ├── package.json
-└── README.md
+└── screenshots
+    ├── add-student.png
+    ├── add-student2.png
+    ├── dashboard.png
+    ├── edit-student.png
+    ├── edit-student2.png
+    ├── students.png
+    └── view-student.png
 ```
 
 ---
